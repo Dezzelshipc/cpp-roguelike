@@ -8,7 +8,7 @@ class Config {
   Config(const Config& config) = default;
 
   Config() {
-    std::ifstream conf("../configs/config.txt");
+    std::ifstream conf("./configs/config.txt");
     std::string row;
 
     while (!conf.eof()) {

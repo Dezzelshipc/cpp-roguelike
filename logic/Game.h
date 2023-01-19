@@ -7,6 +7,7 @@
 #include "Config.h"
 #include "Decoration.h"
 #include "Enemy.h"
+#include "Loader.h"
 #include "Object.h"
 #include "Player.h"
 #include "Render.h"
@@ -27,6 +28,7 @@ class Game {
   std::shared_ptr<Player> player;
   std::shared_ptr<Princess> princess;
 
+  Loader loader;
   Render render;
   Collider collider;
   const Config config;
@@ -120,7 +122,7 @@ class Game {
     princess = std::make_shared<Princess>();
     princess->pos = {-2, 2};
 
-    std::fstream map("../configs/map.txt");
+    std::fstream map("./configs/map.txt");
 
     std::string row;
 
@@ -304,7 +306,7 @@ class Game {
   }
 
   void Start() {
-    Render::DrawScreen("../configs/start.txt");
+    Render::DrawScreen("./configs/start.txt");
     Render::Ref();
     getch();
 
@@ -321,10 +323,10 @@ class Game {
 
     Render::Clr();
     if (progress == GAME_OVER) {
-      Render::DrawScreen("../configs/gameover.txt");
+      Render::DrawScreen("./configs/gameover.txt");
     }
     if (progress == WIN) {
-      Render::DrawScreen("../configs/win.txt");
+      Render::DrawScreen("./configs/win.txt");
     }
     Render::DrawInfo(player, move_count);
     Render::Ref();

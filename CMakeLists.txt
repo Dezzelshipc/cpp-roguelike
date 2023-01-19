@@ -27,6 +27,6 @@ add_executable(${PROJECT_NAME}
         logic/Render.h
         logic/Utility.h
         logic/Config.h
-        logic/objects/TimedObjects.h logic/objects/Weapon.h)
+        logic/objects/TimedObjects.h logic/objects/Weapon.h logic/Loader.h)
 
 
