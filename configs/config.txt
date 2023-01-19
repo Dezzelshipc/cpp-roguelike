@@ -1,0 +1,24 @@
+size_x= 120
+size_y= 40
+
+window_x= 51
+window_y= 21
+window_offset_x= 15
+window_offset_y= 2
+
+enemy_hp= 10
+enemy_radius= 10
+enemy_moves= 2
+enemy_damage= 4
+
+player_hp= 20
+player_damage= 4
+player_arrows= 20
+player_bombs= 1
+
+health_potion= 5
+quiver_capacity= 20
+bomb_radius= 4
+
+weapon_duration= 100
+weapon_multiplier= 2
